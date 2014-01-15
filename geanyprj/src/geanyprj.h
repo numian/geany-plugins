@@ -41,27 +41,28 @@
 
 enum
 {
-	NEW_PROJECT_TYPE_ALL,
-	NEW_PROJECT_TYPE_CPP,
-	NEW_PROJECT_TYPE_C,
-	NEW_PROJECT_TYPE_PYTHON,
-	NEW_PROJECT_TYPE_NONE,
-	NEW_PROJECT_TYPE_SIZE
+    NEW_PROJECT_TYPE_ALL,
+    NEW_PROJECT_TYPE_CPP,
+    NEW_PROJECT_TYPE_C,
+    NEW_PROJECT_TYPE_PYTHON,
+    NEW_PROJECT_TYPE_WEB_PHP,
+    NEW_PROJECT_TYPE_NONE,
+    NEW_PROJECT_TYPE_SIZE
 };
 
 struct GeanyPrj
 {
-	gchar *path;		/**< path to disk file */
+    gchar *path;        /**< path to disk file */
 
-	gchar *name;
-	gchar *description;
-	gchar *base_path;
-	gchar *run_cmd;
+    gchar *name;
+    gchar *description;
+    gchar *base_path;
+    gchar *run_cmd;
 
-	gboolean regenerate;
-	gint type;
+    gboolean regenerate;
+    gint type;
 
-	GHashTable *tags;	/**< project tags */
+    GHashTable *tags;   /**< project tags */
 };
 
 extern GeanyData *geany_data;
